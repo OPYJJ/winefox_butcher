@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "winefox_butcher:item/raw_winefox_meat"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "type": "butchercraft:butcher_block",
+  "carcass": {
+    "item": "winefox_butcher:winefox_head_item"
+  },
+  "group": "",
+  "jei": [
+    {
+      "item": "butchercraft:tongue"
+    },
+    {
+      "item": "butchercraft:eyeball"
+    },
+    {
+      "item": "butchercraft:brain"
+    },
+    {
+      "item": "butchercraft:leather_scrap"
+    }
+  ],
+  "tools": [
+    {
+      "count": 1,
+      "damage": true,
+      "loot_table": "winefox_butcher:butcherblock/winefox_head",
+      "models": [
+        {
+          "IsBlock": false,
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.69
+              },
+              "y": {
+                "max": 0.04
+              },
+              "z": {
+                "max": 7.65
+              }
+            },
+            "rotation": {},
+            "scale": {
+              "x": {
+                "max": 0.833
+              },
+              "y": {
+                "max": 0.833
+              },
+              "z": {
+                "max": 0.833
+              }
+            }
+          },
+          "location": "winefox_butcher:winefox_head_item"
+        },
+        {
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0,
+                "min": -8.0
+              },
+              "y": {
+                "max": 8.0,
+                "min": -8.0
+              },
+              "z": {
+                "max": 8.0,
+                "min": -8.0
+              }
+            },
+            "rotation": {
+              "z": {
+                "loop": true,
+                "max": 45.0,
+                "min": -45.0,
+                "pingpong": true,
+                "speed": 0.05
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "y": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "z": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              }
+            }
+          },
+          "location": "butchercraft:gut_knife"
+        }
+      ],
+      "tool": {
+        "item": "butchercraft:gut_knife"
+      },
+      "uses": 4
+    }
+  ]
+}

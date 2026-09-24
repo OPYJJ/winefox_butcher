@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RXR",
+    "###"
+  ],
+  "key": {
+    "R": {
+      "item": "farmersdelight:cooked_rice"
+    },
+    "X": {
+      "item": "winefox_butcher:cooked_winefox_meat"
+    },
+    "#": {
+      "item": "minecraft:dried_kelp"
+    }
+  },
+  "result": {
+    "item": "winefox_butcher:winefox_sushi_roll"
+  }
+}
+

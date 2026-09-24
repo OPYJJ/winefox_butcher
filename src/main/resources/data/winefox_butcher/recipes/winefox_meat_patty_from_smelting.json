@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "winefox_butcher:winefox_minced_meat"
+  },
+  "result": "winefox_butcher:winefox_meat_patty",
+  "experience": 0.35,
+  "cookingtime": 200
+}
+

@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+# Gradle / build output (anchored to the repository root)
+# ---------------------------------------------------------------------------
+/.gradle/
+/build/
+/run/
+/mcmodsrepo/
+/src/generated/
+
+# Local prerequisite jars (third-party binaries, never committed)
+/libs/*.jar
+
+# ---------------------------------------------------------------------------
+# IDE
+# ---------------------------------------------------------------------------
+/.idea/
+/.vscode/
+/.settings/
+*.iml
+*.ipr
+*.iws
+/.classpath
+/.project
+/out/
+/eclipse/
+
+# ---------------------------------------------------------------------------
+# Logs and temporary files (build logs live in the repository root)
+# ---------------------------------------------------------------------------
+/*.log
+/*.log.gz
+/*.tmp
+/*.bak
+/*.orig
+/*.rej
+hs_err_pid*
+crash-*.txt
+
+# Built artifacts in the repository root
+/winefox_butcher-*.jar
+
+# ---------------------------------------------------------------------------
+# Reference sources of the prerequisite mods (kept locally for development,
+# never part of this project). Anchored so that source folders such as
+# src/main/java/.../compat/farmersdelight/ or data/butchercraft/ are NOT matched.
+# ---------------------------------------------------------------------------
+/Butchercraft/
+/TouhouLittleMaid/
+/FarmersDelight/
+/callresponse/
+/extracted/
+
+# Bundled JDK and other local tooling
+/jdk-*/
+/jdk1*/
+/openjdk*/
+
+# ---------------------------------------------------------------------------
+# Local-only materials
+# ---------------------------------------------------------------------------
+/.workbuddy/
+/.codebuddy/
+/publishing/
+/.run-test-java17.bat
+
+# ---------------------------------------------------------------------------
+# OS noise
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini

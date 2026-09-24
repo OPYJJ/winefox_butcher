@@ -1,0 +1,38 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "farmersdelight:cutting_board"
+  },
+  "cookingtime": 230,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "forge:crops/carrot"
+    },
+    {
+      "tag": "forge:crops/carrot"
+    },
+    {
+      "tag": "forge:crops/potato"
+    },
+    {
+      "tag": "forge:crops/potato"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "item": "winefox_butcher:winefox_carcass"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "winefox_butcher:winefox_roast_fox"
+  }
+}

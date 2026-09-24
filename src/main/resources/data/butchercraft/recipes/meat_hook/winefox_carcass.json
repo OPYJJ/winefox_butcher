@@ -1,0 +1,513 @@
+{
+  "type": "butchercraft:meat_hook",
+  "carcass": {
+    "item": "winefox_butcher:winefox_carcass"
+  },
+  "group": "",
+  "jei": [
+    {
+      "item": "butchercraft:blood_fluid_bucket"
+    },
+    {
+      "item": "butchercraft:fat"
+    },
+    {
+      "item": "butchercraft:leather_scrap"
+    },
+    {
+      "item": "butchercraft:sinew"
+    },
+    {
+      "item": "winefox_butcher:winefox_head_item"
+    },
+    {
+      "item": "winefox_butcher:winefox_heart"
+    },
+    {
+      "item": "butchercraft:kidney"
+    },
+    {
+      "item": "butchercraft:liver"
+    },
+    {
+      "item": "butchercraft:stomach"
+    },
+    {
+      "item": "butchercraft:lung"
+    },
+    {
+      "item": "butchercraft:tripe"
+    },
+    {
+      "item": "winefox_butcher:cubed_winefox_meat"
+    },
+    {
+      "item": "winefox_butcher:raw_winefox_meat"
+    },
+    {
+      "item": "minecraft:bone"
+    }
+  ],
+  "tools": [
+    {
+      "count": 1,
+      "damage": true,
+      "loot_table": "butchercraft:meat_hook/blood_bucket",
+      "models": [
+        {
+          "IsBlock": false,
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0
+              },
+              "y": {
+                "max": -9.23
+              },
+              "z": {
+                "max": 11.25
+              }
+            },
+            "rotation": {
+              "x": {
+                "max": 0.0
+              },
+              "y": {
+                "max": 180.0
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.795
+              },
+              "y": {
+                "max": 0.795
+              },
+              "z": {
+                "max": 0.795
+              }
+            }
+          },
+          "location": "winefox_butcher:winefox_carcass"
+        },
+        {
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0,
+                "min": -8.0
+              },
+              "y": {
+                "max": 24.0,
+                "min": -24.0
+              },
+              "z": {
+                "max": 12.0,
+                "min": -12.0
+              }
+            },
+            "rotation": {
+              "z": {
+                "loop": true,
+                "max": 45.0,
+                "min": -45.0,
+                "pingpong": true,
+                "speed": 0.05
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "y": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "z": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              }
+            }
+          },
+          "location": "minecraft:bucket"
+        }
+      ],
+      "tool": {
+        "item": "minecraft:bucket"
+      },
+      "uses": 2
+    },
+    {
+      "count": 1,
+      "damage": true,
+      "loot_table": "winefox_butcher:meat_hook/skin_winefox",
+      "models": [
+        {
+          "IsBlock": false,
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0
+              },
+              "y": {
+                "max": -9.23
+              },
+              "z": {
+                "max": 11.25
+              }
+            },
+            "rotation": {
+              "x": {
+                "max": 0.0
+              },
+              "y": {
+                "max": 180.0
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.795
+              },
+              "y": {
+                "max": 0.795
+              },
+              "z": {
+                "max": 0.795
+              }
+            }
+          },
+          "location": "winefox_butcher:winefox_carcass_stage1"
+        },
+        {
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0,
+                "min": -8.0
+              },
+              "y": {
+                "max": 24.0,
+                "min": -24.0
+              },
+              "z": {
+                "max": 12.0,
+                "min": -12.0
+              }
+            },
+            "rotation": {
+              "z": {
+                "loop": true,
+                "max": 45.0,
+                "min": -45.0,
+                "pingpong": true,
+                "speed": 0.05
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "y": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "z": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              }
+            }
+          },
+          "location": "butchercraft:skinning_knife"
+        }
+      ],
+      "tool": {
+        "item": "butchercraft:skinning_knife"
+      },
+      "uses": 2
+    },
+    {
+      "count": 1,
+      "damage": true,
+      "loot_table": "winefox_butcher:meat_hook/bisect_winefox",
+      "models": [
+        {
+          "IsBlock": false,
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0
+              },
+              "y": {
+                "max": -9.23
+              },
+              "z": {
+                "max": 11.25
+              }
+            },
+            "rotation": {
+              "x": {
+                "max": 0.0
+              },
+              "y": {
+                "max": 180.0
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.795
+              },
+              "y": {
+                "max": 0.795
+              },
+              "z": {
+                "max": 0.795
+              }
+            }
+          },
+          "location": "winefox_butcher:winefox_carcass_stage2"
+        },
+        {
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0,
+                "min": -8.0
+              },
+              "y": {
+                "max": 24.0,
+                "min": -24.0
+              },
+              "z": {
+                "max": 12.0,
+                "min": -12.0
+              }
+            },
+            "rotation": {
+              "z": {
+                "loop": true,
+                "max": 45.0,
+                "min": -45.0,
+                "pingpong": true,
+                "speed": 0.05
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "y": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "z": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              }
+            }
+          },
+          "location": "butchercraft:bone_saw"
+        }
+      ],
+      "tool": {
+        "item": "butchercraft:bone_saw"
+      },
+      "uses": 2
+    },
+    {
+      "count": 1,
+      "damage": true,
+      "loot_table": "winefox_butcher:meat_hook/disembowel_winefox",
+      "models": [
+        {
+          "IsBlock": false,
+          "animation": {
+            "location": {
+              "x": {
+                "max": 7.99
+              },
+              "y": {
+                "max": -6.32
+              },
+              "z": {
+                "max": 8.63
+              }
+            },
+            "rotation": {
+              "x": {
+                "max": 0.0
+              },
+              "y": {
+                "max": 180.0
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.795
+              },
+              "y": {
+                "max": 0.795
+              },
+              "z": {
+                "max": 0.795
+              }
+            }
+          },
+          "location": "winefox_butcher:winefox_carcass_stage3"
+        },
+        {
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0,
+                "min": -8.0
+              },
+              "y": {
+                "max": 24.0,
+                "min": -24.0
+              },
+              "z": {
+                "max": 12.0,
+                "min": -12.0
+              }
+            },
+            "rotation": {
+              "z": {
+                "loop": true,
+                "max": 45.0,
+                "min": -45.0,
+                "pingpong": true,
+                "speed": 0.05
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "y": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "z": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              }
+            }
+          },
+          "location": "butchercraft:gut_knife"
+        }
+      ],
+      "tool": {
+        "item": "butchercraft:gut_knife"
+      },
+      "uses": 2
+    },
+    {
+      "count": 1,
+      "damage": true,
+      "loot_table": "winefox_butcher:meat_hook/butcher_winefox",
+      "models": [
+        {
+          "IsBlock": false,
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0
+              },
+              "y": {
+                "max": -6.32
+              },
+              "z": {
+                "max": 8.71
+              }
+            },
+            "rotation": {
+              "x": {
+                "max": 0.0
+              },
+              "y": {
+                "max": 180.0
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.795
+              },
+              "y": {
+                "max": 0.795
+              },
+              "z": {
+                "max": 0.795
+              }
+            }
+          },
+          "location": "winefox_butcher:winefox_carcass_stage4"
+        },
+        {
+          "animation": {
+            "location": {
+              "x": {
+                "max": 8.0,
+                "min": -8.0
+              },
+              "y": {
+                "max": 24.0,
+                "min": -24.0
+              },
+              "z": {
+                "max": 12.0,
+                "min": -12.0
+              }
+            },
+            "rotation": {
+              "z": {
+                "loop": true,
+                "max": 45.0,
+                "min": -45.0,
+                "pingpong": true,
+                "speed": 0.05
+              }
+            },
+            "scale": {
+              "x": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "y": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              },
+              "z": {
+                "max": 0.5,
+                "min": -0.5,
+                "speed": 1.0
+              }
+            }
+          },
+          "location": "butchercraft:butcher_knife"
+        }
+      ],
+      "tool": {
+        "item": "butchercraft:butcher_knife"
+      },
+      "uses": 2
+    }
+  ]
+}

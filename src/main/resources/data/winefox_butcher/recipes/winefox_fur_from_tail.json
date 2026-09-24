@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "winefox_butcher:winefox_tail"
+    }
+  ],
+  "result": {
+    "item": "winefox_butcher:winefox_fur",
+    "count": 4
+  }
+}

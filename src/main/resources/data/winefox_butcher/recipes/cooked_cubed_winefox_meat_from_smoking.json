@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "winefox_butcher:cubed_winefox_meat"
+  },
+  "result": "winefox_butcher:cooked_cubed_winefox_meat",
+  "experience": 0.35,
+  "cookingtime": 100
+}

@@ -1,0 +1,15 @@
+{
+  "type": "butchercraft:grinder",
+  "attachment": {
+    "item": "butchercraft:grinder_tip"
+  },
+  "grinds": 8,
+  "ingredient": {
+    "item": "winefox_butcher:winefox_heart"
+  },
+  "ingredientCount": 1,
+  "result": {
+    "count": 2,
+    "item": "winefox_butcher:spirit_essence"
+  }
+}

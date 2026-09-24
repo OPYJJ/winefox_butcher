@@ -1,0 +1,130 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://maven.parchmentmc.org' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.77'
+        classpath group: 'org.parchmentmc', name: 'librarian', version: '1.2.0.7-dev-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+
+version = mod_version
+group = mod_group_id
+archivesBaseName = 'winefox_butcher'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+
+minecraft {
+    mappings channel: 'parchment', version: '2023.09.03-1.20.1'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                winefox_butcher {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                winefox_butcher {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', 'winefox_butcher', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+        }
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["$rootDir/src/main/resources"]
+        }
+    }
+}
+
+repositories {
+    // Local prerequisite mods (file names must follow the artifact-version.jar convention)
+    flatDir { dir 'libs' }
+    // GeckoLib official maven
+    maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url = 'https://maven.blamejared.com/' }
+    maven { url = 'https://www.cursemaven.com' }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+
+    // GeckoLib (models and animations)
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${mc_version}:${geckolib_version}")
+
+    // Local prerequisite mods, resolved from libs/ through flatDir:
+    //  - butchercraft    : deobf jar built from local sources, referenced directly
+    //  - touhoulittlemaid: release jar, deobfuscated at compile time with fg.deobf()
+    //  - farmersdelight  : release jar, deobfuscated at compile time with fg.deobf()
+    implementation "butchercraft:butchercraft:${butchercraft_version}"
+    implementation fg.deobf("touhoulittlemaid:touhoulittlemaid:${tlm_version}")
+    implementation fg.deobf("farmersdelight:farmersdelight:${farmersdelight_version}")
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "winefox_butcher",
+                "Specification-Vendor"    : "OPYJJ",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "OPYJJ",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file:///${project.projectDir}/mcmodsrepo"
+        }
+    }
+}

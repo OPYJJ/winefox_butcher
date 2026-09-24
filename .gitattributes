@@ -1,0 +1,13 @@
+# Normalize line endings: keep LF in the repository regardless of the platform
+* text=auto eol=lf
+
+# Binary files (never convert)
+*.jar binary
+*.png binary
+*.ogg binary
+*.nbt binary
+*.zip binary
+
+# Generated / binary-adjacent assets that should keep their exact bytes
+*.geo.json text
+*.animation.json text

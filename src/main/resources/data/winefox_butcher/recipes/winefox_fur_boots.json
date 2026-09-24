@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "winefox_butcher:winefox_fur"
+    }
+  },
+  "result": {
+    "item": "winefox_butcher:winefox_fur_boots"
+  }
+}
+
