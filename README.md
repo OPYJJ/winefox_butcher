@@ -15,11 +15,17 @@
 
 **Winefox Maid Butcher** is an unofficial linkage addon for [Touhou Little Maid](https://github.com/TartaricAcid/TouhouLittleMaid) and [Butchercraft](https://github.com/Lance5057/Butchercraft). It turns the winefox maid into both a butchering subject and a cooking ingredient: hunt her down, put the carcass on a meat hook, work through the whole processing chain, and cook the results — including the two-block **roast fox feast** rendered with GeckoLib and animated in six eating stages. On top of that the mod adds a permanent maid breeding expansion, model and voice genes, baby growth, and villager-to-maid conversion.
 
+> **Butchering is for adults only.** Only adult winefox maids take part in butchering — baby maids are
+> excluded, so killing a baby maid never yields a carcass, tail or raw winefox meat.
+
 ## Features
 
 ### Butchering
 
-- Killed with a butcher knife, a winefox maid drops a carcass instead of a grave.
+Only **adult** winefox maids are part of the butchering chain: baby maids are excluded, so a butcher
+knife on a baby yields nothing — she drops no carcass, no tail and no raw winefox meat.
+
+- Killed with a butcher knife, an **adult** winefox maid drops a carcass instead of a grave.
 - The carcass can be hung on a meat hook and processed step by step: **bleeding → skinning → bone sawing → disembowelling → butcher knife cutting**.
 - Outputs include winefox meat, bones, heart, head and sinew, with separate loot tables for every processing step and for bisecting / skinning routes.
 - The maid can be assigned the **butcher task**: she walks up to a carcass, hangs it on a meat hook and processes it with the knife by herself.

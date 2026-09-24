@@ -4,6 +4,8 @@ import com.github.tartaricacid.touhoulittlemaid.api.event.MaidDeathEvent;
 import com.github.tartaricacid.touhoulittlemaid.api.event.MaidTombstoneEvent;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
 import com.yourname.maidfox.init.ModItems;
+import com.yourname.maidfox.expansion.capability.IMaidGeneCapability;
+import com.yourname.maidfox.expansion.capability.MaidGeneCapabilityManager;
 import com.yourname.maidfox.item.WinefoxCarcassItem;
 import java.util.Locale;
 import java.util.UUID;
@@ -77,6 +79,10 @@ public class FoxButcherEvents {
         }
         if (!FoxButcherEvents.isWinefoxMaid(maid)) {
             LOGGER.info("Maid died with modelId={} (ysm={}), not a winefox model - no carcass drop", maid.getModelId(), (maid.isYsmModel() ? maid.getYsmModelId() : "-"));
+            return;
+        }
+        if (FoxButcherEvents.isBabyMaid(maid)) {
+            LOGGER.info("Baby winefox maid died - baby maids are excluded from butchering, no carcass drop");
             return;
         }
         boolean butcherKnifeInvolved = FoxButcherEvents.isDirectButcherKnifeKill(source);
@@ -176,6 +182,15 @@ public class FoxButcherEvents {
             return FoxButcherEvents.containsWinefox(maid.getYsmModelId());
         }
         return false;
+    }
+
+    /**
+     * Only adult winefox maids take part in butchering: baby maids (negative age in the gene
+     * capability) are excluded, so killing them never drops a carcass, tail or raw meat.
+     * Maids without the expansion capability count as adults.
+     */
+    private static boolean isBabyMaid(EntityMaid maid) {
+        return MaidGeneCapabilityManager.get(maid).map(IMaidGeneCapability::isBaby).orElse(false);
     }
 
     private static boolean isNineTailedMaid(EntityMaid maid) {
