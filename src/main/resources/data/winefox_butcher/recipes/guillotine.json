@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["III", "PCP", "PPP"],
+  "key": {
+    "I": {"item": "minecraft:iron_ingot"},
+    "P": {"tag": "minecraft:planks"},
+    "C": {"item": "minecraft:chain"}
+  },
+  "result": {"item": "winefox_butcher:guillotine", "count": 1}
+}

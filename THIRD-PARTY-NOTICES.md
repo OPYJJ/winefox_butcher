@@ -43,11 +43,13 @@ projects remain with their respective authors.
 
 ## Love & Loathing (`callresponse`)
 
+- **Author**: JumDa5he — CurseForge project 1631516.
+
 - **Used for**: the optional grave compatibility branch (cancelling grave creation for butchered
   winefox maids). It is detected at runtime with `ModList.isLoaded`, so no code of this project
   links against it at compile time.
 - **License**: as declared by its upstream project.
-- **Upstream**: https://github.com/Lance5057/LoveAndLoathing
+- **Upstream**: https://www.curseforge.com/projects/1631516
 
 ## Notes on derived assets
 

@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY--NC--SA%204.0-green" alt="License">
     <img src="https://img.shields.io/badge/Minecraft-1.20.1-blue" alt="Minecraft 1.20.1">
     <img src="https://img.shields.io/badge/Forge-47.x-orange" alt="Forge 47.x">
-    <img src="https://img.shields.io/badge/version-0.10-informational" alt="version 0.10">
+    <img src="https://img.shields.io/badge/version-0.20-informational" alt="version 0.20">
 </p>
 
 <hr>
@@ -15,19 +15,33 @@
 
 **Winefox Maid Butcher** is an unofficial linkage addon for [Touhou Little Maid](https://github.com/TartaricAcid/TouhouLittleMaid) and [Butchercraft](https://github.com/Lance5057/Butchercraft). It turns the winefox maid into both a butchering subject and a cooking ingredient: hunt her down, put the carcass on a meat hook, work through the whole processing chain, and cook the results — including the two-block **roast fox feast** rendered with GeckoLib and animated in six eating stages. On top of that the mod adds a permanent maid breeding expansion, model and voice genes, baby growth, and villager-to-maid conversion.
 
+> **Butchering is for adults only.** Only adult winefox maids take part in butchering — baby maids are
+> excluded, so killing a baby maid never yields a carcass, tail or raw winefox meat.
+
 ## Features
 
 ### Butchering
 
-- Killed with a butcher knife, a winefox maid drops a carcass instead of a grave.
+Only **adult** winefox maids are part of the butchering chain: baby maids are excluded, so a butcher
+knife on a baby yields nothing — she drops no carcass, no tail and no raw winefox meat.
+
+- Killed with a butcher knife, an **adult** winefox maid drops a carcass instead of a grave.
 - The carcass can be hung on a meat hook and processed step by step: **bleeding → skinning → bone sawing → disembowelling → butcher knife cutting**.
 - Outputs include winefox meat, bones, heart, head and sinew, with separate loot tables for every processing step and for bisecting / skinning routes.
 - The maid can be assigned the **butcher task**: she walks up to a carcass, hangs it on a meat hook and processes it with the knife by herself.
 
+### Guillotine
+
+- A **3×3×4 multi-block machine**: placing the main block (`winefox_butcher:guillotine`) automatically fills the 35 surrounding parts (`winefox_butcher:guillotine_part`). Craft it from 3 iron ingots, 5 planks and 1 chain (`III` / `PCP` / `PPP`).
+- **Binding a maid**: lead an adult maid within four blocks and right-click the machine with the lead, or sneak + right-click her with the lead to select her first and then right-click the machine.
+- **Execution**: right-click the machine with an empty hand to drop the blade. The damage type `winefox_butcher:guillotine` **ignores armour, resistance and shields**, and killing a winefox-model maid this way additionally drops a winefox head.
+- **Reset and release**: right-click again with an empty hand to raise the blade; sneak + empty hand releases the maid. Baby maids **cannot be bound** — only adult maids take part, matching the butchering rule.
+- **Redstone activation**: any block of the structure receiving a redstone signal drops the blade while a maid is bound (the equivalent of the empty-hand interaction), and the blade resets automatically when the signal ends. This works alongside the right-click controls. Because the parts are non-full shapes, levers and redstone torches cannot be attached directly to them — power the structure from a lever, redstone dust, a redstone block or a comparator output on an adjacent solid block.
+
 ### Winefox cuisine
 
 - The full winefox meat line: raw / cooked meat, cubes, mince, patties, burgers, barbecue sticks, meat pot, stew, fried rice, pasta, sushi and sushi rolls.
-- **Farmer's Delight integration** (soft dependency): cooking pot recipes for fried rice, meat pot and more; when Farmer's Delight is absent these recipes and blocks are skipped at load time.
+- **Farmer's Delight integration**: cooking pot recipes for fried rice, meat pot and more. Farmer's Delight is a **required** dependency, so these recipes and blocks are always available.
 - Sneak + right click with a winefox dish on a tamed maid raises her affection, and the eating animation and sound are played.
 
 ### Roast fox feast
@@ -69,14 +83,14 @@
 | [Touhou Little Maid](https://github.com/TartaricAcid/TouhouLittleMaid) | `[1.5.3,1.6)` | yes |
 | [Butchercraft](https://github.com/Lance5057/Butchercraft) | `[2.4.1,3)` | yes |
 | [GeckoLib](https://github.com/bernie-g/geckolib) | `[4.8.4,5)` | yes |
-| [Farmer's Delight](https://github.com/vectorwing/FarmersDelight) | `[1.3.2,2)` | no (cooking recipes) |
-| [Love & Loathing](https://github.com/Lance5057/LoveAndLoathing) (`callresponse`) | `[2.0.4,3)` | no (grave compat) |
+| [Farmer's Delight](https://github.com/vectorwing/FarmersDelight) | `[1.3.2,2)` | yes |
+| [Love & Loathing](https://www.curseforge.com/projects/1631516) (`callresponse`) | `[2.0.4,3)` | no (grave compat) |
 
 ## Installation
 
 1. Install Minecraft 1.20.1 with Forge 47.x.
 2. Put the mandatory dependencies above into your `mods/` folder.
-3. Drop `winefox_butcher-0.10.jar` into the same `mods/` folder.
+3. Drop `winefox_butcher-0.20.jar` into the same `mods/` folder.
 4. Launch the game. Only the client and the integrated server are supported targets; dedicated servers work as well since all mandatory dependencies are server-safe.
 
 ## Building from source

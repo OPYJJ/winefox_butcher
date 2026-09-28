@@ -2,6 +2,7 @@ package com.yourname.maidfox.init;
 
 import com.yourname.maidfox.delight.compat.farmersdelight.WinefoxDelightCompat;
 import com.yourname.maidfox.delight.item.WinefoxSushiRollItem;
+import com.yourname.maidfox.guillotine.GuillotineItem;
 import com.yourname.maidfox.init.ModArmorMaterials;
 import com.yourname.maidfox.init.ModFoods;
 import com.yourname.maidfox.item.SoulAmuletItem;
@@ -57,6 +58,7 @@ public class ModItems {
     public static final RegistryObject<Item> WINEFOX_FUR_REINFORCED_HELMET = ITEMS.register("winefox_fur_reinforced_helmet", () -> new ArmorItem(ModArmorMaterials.WINEFOX_FUR_REINFORCED, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> WINEFOX_FUR_REINFORCED_CHESTPLATE = ITEMS.register("winefox_fur_reinforced_chestplate", () -> new ArmorItem(ModArmorMaterials.WINEFOX_FUR_REINFORCED, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> WINEFOX_FUR_REINFORCED_LEGGINGS = ITEMS.register("winefox_fur_reinforced_leggings", () -> new ArmorItem(ModArmorMaterials.WINEFOX_FUR_REINFORCED, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<GuillotineItem> GUILLOTINE = ITEMS.register("guillotine", GuillotineItem::new);
     public static final RegistryObject<Item> WINEFOX_FUR_REINFORCED_BOOTS = ITEMS.register("winefox_fur_reinforced_boots", () -> new ArmorItem(ModArmorMaterials.WINEFOX_FUR_REINFORCED, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static void register(IEventBus bus) {
